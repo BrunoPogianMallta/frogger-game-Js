@@ -6,7 +6,7 @@
     width: 600px;
     height: 600px;
     transform: translate(-50%,-50%);
-    background: url('./assets/background.png');
+    background: url('./assets/rio.png');
 }
 
 canvas {

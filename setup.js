@@ -35,6 +35,10 @@ const particlesArray = [];
 const maxParticles = 300;
 const riples = [];
 const carsArray = [];
-const logArray = [];
+const logsArray = [];
 
+
+//images
+const background = new Image();
+background.src ='./assets/fundo.png'
 
