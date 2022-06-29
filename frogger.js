@@ -11,10 +11,19 @@ class Frogger {
         this.frameY = 0;
     }
     update(){
+        //frog jump up
         if(keys[38]){
             if(this.moving === false){
                 this.y =this.y -grid;
                 this.moving = true;
+            }
+        }
+        if(keys[40]){
+            if(this.moving === false){
+               if(this.y < canvas.height - this.height *2 && this.moving === false){
+                this.y += grid;
+                this.moving = true;
+               }
             }
         }
     }
