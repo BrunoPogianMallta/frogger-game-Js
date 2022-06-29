@@ -33,12 +33,15 @@ let gameSpeed = 1;
 
 const particlesArray = [];
 const maxParticles = 300;
-const riples = [];
+const ripplesArray = [];
 const carsArray = [];
 const logsArray = [];
 
 
 //images
 const background = new Image();
-background.src ='./assets/fundo.png'
+background.src ='./assets/fundo-rua.png'
+
+const grass = new Image();
+// grass.src = './assets/grama.png';
 

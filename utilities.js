@@ -1,9 +1,11 @@
 function animate() {
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
+    handleParticles();
     frogger.draw();
     frogger.update();
     handleObstacles();
+    ctx4.drawImage(grass,0, 0, canvas.width, canvas.height);
     requestAnimationFrame(animate);
 }
 
