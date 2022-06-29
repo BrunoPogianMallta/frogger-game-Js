@@ -11,7 +11,12 @@ class Frogger {
         this.frameY = 0;
     }
     update(){
-        console.log('update')
+        if(keys[38]){
+            if(this.moving === false){
+                this.y =this.y -grid;
+                this.moving = true;
+            }
+        }
     }
     draw() {
         ctx3.fillStyle = 'green';
@@ -19,7 +24,15 @@ class Frogger {
     }
 
     jump() {
-        console.log('jump');
+        if(keys[37]){
+            console.log('esqueda');
+        }else if(keys[38]){
+            console.log('pra cima');
+        }else if(keys[39]) {
+            console.log('direita');
+        }else if(keys[40]){
+            console.log('pra baixo')
+        }
     }
 }
 
