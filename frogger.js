@@ -16,6 +16,7 @@ class Frogger {
             if(!this.moving){
                 this.y =this.y -grid;
                 this.moving = true;
+                console.log(this.y);
             }
         }
         //frog jump down
@@ -24,14 +25,24 @@ class Frogger {
                 this.y += grid;
                 this.moving = true;
                }
+               console.log(this.y);
         }
         //frog jump to the left
         if(keys[37]){
             if(!this.moving && this.x > this.width){
              this.x -= grid;
              this.moving = true;
+             console.log(this.x)
             }
-     }
+        }
+
+        if(keys[39]){
+            if(!this.moving && this.x < canvas.width - this.width * 2){
+            this.x += grid;
+            this.moving = true;
+            console.log(this.x)
+            }
+        }
     }
     draw() {
         ctx3.fillStyle = 'green';
@@ -52,4 +63,3 @@ class Frogger {
 }
 
 const frogger = new Frogger();
-console.log(frogger)
