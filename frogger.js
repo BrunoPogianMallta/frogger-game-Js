@@ -13,19 +13,25 @@ class Frogger {
     update(){
         //frog jump up
         if(keys[38]){
-            if(this.moving === false){
+            if(!this.moving){
                 this.y =this.y -grid;
                 this.moving = true;
             }
         }
+        //frog jump down
         if(keys[40]){
-            if(this.moving === false){
-               if(this.y < canvas.height - this.height *2 && this.moving === false){
+               if(!this.moving && this.y < canvas.height - this.height *2 ){
                 this.y += grid;
                 this.moving = true;
                }
-            }
         }
+        //frog jump to the left
+        if(keys[37]){
+            if(!this.moving && this.x > this.width){
+             this.x -= grid;
+             this.moving = true;
+            }
+     }
     }
     draw() {
         ctx3.fillStyle = 'green';
