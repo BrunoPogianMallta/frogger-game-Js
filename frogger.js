@@ -60,6 +60,7 @@ class Frogger {
     jump() {
         if(!this.moving){
             this.frameX =1;
+            this.moveSound();
         }else if(this.frameX === 1){
             this.frameX =0;
         }
@@ -72,6 +73,16 @@ class Frogger {
         }else if(keys[40]){
             console.log('pra baixo')
         }
+    }
+    moveSound(){
+        const ribbit = new Audio();
+        ribbit.src = './sounds/sapo-pulando-final.mp3';
+        return ribbit.play();
+    }
+    deadSound(){
+        const deadSound = new Audio();
+        deadSound.src = './sounds/frogg-dead-sound.mp3';
+        return deadSound.play();
     }
 }
 

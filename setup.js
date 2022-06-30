@@ -41,23 +41,24 @@ const logsArray = [];
 
 //images
 const background = new Image();
-background.src ='./assets/fundo-rua.png'
+background.src ='./assets/general/fundo-rua.png'
 
 const grass = new Image();
 // grass.src = './assets/grama.png';
 
 const collisionImg = new Image();
-collisionImg.src ='./assets/efeitos.png';
+collisionImg.src ='./assets/efects/efeitos.png';
 
 const turtle = new Image();
-turtle.src =  './assets/turtles.png';
+turtle.src =  './assets/obstacles/turtles.png';
 
 const log = new Image();
-log.src = './assets/log.png';
+log.src = './assets/obstacles/log.png';
 
 const car = new Image();
-car.src = './assets/cars.png';
-let numberOfCars = 3;
+car.src = './assets/cars/cars2.png';
+let numberOfCars =4;
 
 const froggerSprite = new Image();
-froggerSprite.src ='./assets/sapo-verde.png';
+froggerSprite.src ='./assets/frogger/sapo-verde.png';
+
