@@ -41,7 +41,7 @@ const logsArray = [];
 
 //images
 const background = new Image();
-background.src ='./assets/general/fundo-rua.png'
+background.src ='../src/assets/general/fundo-rua.png'
 
 const grass = new Image();
 // grass.src = './assets/grama.png';

@@ -6,7 +6,7 @@
     width: 600px;
     height: 600px;
     transform: translate(-50%,-50%);
-    background: url('./assets/general/rio-claro.png');
+    background: url('../assets/general/rio-claro.png');
 }
 
 canvas {
@@ -25,7 +25,7 @@ canvas {
     width: 600px;
     height: 600px;
     transform: translate(-50%,-50%);
-    background: url('./assets/general/title-screen2.png');
+    background: url('../assets/general/title-screen2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
