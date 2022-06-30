@@ -39,7 +39,7 @@ const carsArray = [];
 const logsArray = [];
 
 
-//images
+//images and sounds
 const background = new Image();
 background.src ='../src/assets/general/fundo-rua.png'
 
@@ -61,4 +61,21 @@ let numberOfCars =4;
 
 const froggerSprite = new Image();
 froggerSprite.src ='./assets/frogger/sapo-verde.png';
+
+const touchDown = new Audio();
+touchDown.src = './sounds/touch-down.mp3';
+
+const traffic = new Audio();
+traffic.src = './sounds/traffic.mp3';
+if (typeof traffic.loop == 'boolean')
+{
+    traffic.loop = true;
+}
+else
+{
+    traffic.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
 

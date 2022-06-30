@@ -1,4 +1,5 @@
 function animate() {
+    traffic.play();
     ctx3.clearRect(0, 0, canvas.width, canvas.height);
     ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
     handleParticles();
@@ -9,6 +10,7 @@ function animate() {
     ctx4.drawImage(grass,0, 0, canvas.width, canvas.height);
     frame++;
     requestAnimationFrame(animate);
+    
 }
 
 animate();
@@ -30,6 +32,7 @@ window.addEventListener('keyup',function(e){
 
 function scored() {
     score++;
+    touchDown.play();
     gameSpeed += 0.05;
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height -40;
