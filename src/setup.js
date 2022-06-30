@@ -27,9 +27,10 @@ canvas5.height = 600;
 const grid = 80;
 let keys = [];
 let score = 0;
-let colisions = 0;
+let colisions = 3;
 let frame = 0;
 let gameSpeed = 1;
+let gameStart = true;
 let onTheLog = false;
 
 const particlesArray = [];

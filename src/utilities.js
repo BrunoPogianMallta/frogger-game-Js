@@ -1,19 +1,22 @@
-function animate() {
-    traffic.play();
-    ctx3.clearRect(0, 0, canvas.width, canvas.height);
-    ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
-    handleParticles();
-    frogger.draw();
-    frogger.update();
-    handleObstacles();
-    handleScoreBoard();
-    ctx4.drawImage(grass,0, 0, canvas.width, canvas.height);
-    frame++;
-    requestAnimationFrame(animate);
-    
+
+    function animate() {
+        traffic.play();
+        ctx3.clearRect(0, 0, canvas.width, canvas.height);
+        ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
+        handleParticles();
+        frogger.draw();
+        frogger.update();
+        handleObstacles();
+        handleScoreBoard();
+        ctx4.drawImage(grass,0, 0, canvas.width, canvas.height);
+        frame++;
+        requestAnimationFrame(animate); 
+    }
+       
+if(gameStart){
+    animate();
 }
 
-animate();
 
 //event listners
 window.addEventListener('keydown',function(e){
@@ -42,12 +45,13 @@ function handleScoreBoard(){
     ctx4.fillStyle = 'black';
     ctx4.strokeStyle = 'black';
     ctx4.font = '25px Arial';
-    ctx4.strokeText('Pontos',253,17)
+    ctx4.fillText('Pontos',430,17)
     ctx4.font = '60px Arial';
-    ctx4.strokeText(score,270,69);
-    ctx4.font ='15px Verdana';
-    ctx4.strokeText('Colisões: ' + colisions, 10, 175);
-    ctx4.strokeText('Velocidade : ' + gameSpeed.toFixed(1), 10, 195);
+    ctx4.fillText(score,500,69);
+    ctx4.font ='20px Verdana';
+    ctx4.fillText('Vidas: ' + colisions, 10,70);
+    ctx4.fillText('Velocidade : ' + gameSpeed.toFixed(1), 10, 50);
+   
 }
 
 //detect collisions
@@ -63,6 +67,20 @@ function resetGame(){
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height -40;
     score = 0;
-    colisions++;
+    colisions--;
     gameSpeed = 1;
+    if(colisions <= 0){
+        gameStart = false;
+        traffic.pause();
+        ctx4.fillStyle = 'white';
+        ctx4.fillText('GAME OVER',220,250);
+        ctx4.font ='200px Verdana';
+        if(!gameStart){
+            window.location.href = "./gameOver.html";
+        }    
+    }
+    
+    
+    
+
 }
