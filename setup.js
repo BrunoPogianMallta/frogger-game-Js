@@ -30,6 +30,7 @@ let score = 0;
 let colisions = 0;
 let frame = 0;
 let gameSpeed = 1;
+let onTheLog = false;
 
 const particlesArray = [];
 const maxParticles = 300;
@@ -45,3 +46,18 @@ background.src ='./assets/fundo-rua.png'
 const grass = new Image();
 // grass.src = './assets/grama.png';
 
+const collisionImg = new Image();
+collisionImg.src ='./assets/efeitos.png';
+
+const turtle = new Image();
+turtle.src =  './assets/turtles.png';
+
+const log = new Image();
+log.src = './assets/log.png';
+
+const car = new Image();
+car.src = './assets/cars.png';
+let numberOfCars = 3;
+
+const froggerSprite = new Image();
+froggerSprite.src ='./assets/sapo-verde.png';
