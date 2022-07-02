@@ -54,8 +54,8 @@ background.src ='../src/assets/general/river_bank2.png'
 const grass = new Image();
 // grass.src = './assets/grama.png';
 
-const collisionImg = new Image();
-collisionImg.src ='./assets/efects/efeitos.png';
+const collisionCar = new Image();
+collisionCar.src ='./assets/efects/dead-efect.png';
 
 const turtle = new Image();
 turtle.src =  './assets/obstacles/turtles.png';

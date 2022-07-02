@@ -94,7 +94,7 @@ function handleObstacles() {
     //colision cars
     for(let i =0 ; i < carsArray.length;i++){
         if(collision(frogger, carsArray[i])){
-        ctx1.drawImage(collisionImg,frogger.x, frogger.y, 50, 50);
+        ctx1.drawImage(collisionCar,frogger.x, frogger.y, 50, 50);
         frogger.deadSound();
         resetGame();
        }

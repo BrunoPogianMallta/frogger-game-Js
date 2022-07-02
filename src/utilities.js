@@ -60,7 +60,7 @@ function handleScoreBoard(){
 
 //detect collisions
 function collision(first, second){
-    return !(first.x > second.x + second.width ||
+    return !(first.x > second.x + second.width-50 ||
           first.x + first.width < second.x ||
           first.y > second.y + second.height ||
           first.y + first.height < second.y);
