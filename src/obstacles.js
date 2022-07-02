@@ -110,14 +110,8 @@ function handleObstacles() {
             }
         }
         if(!onTheLog){
-            for(let i =0; i < 30; i++){
-                waterSound.play();
-                // ripplesArray.unshift(new Particles(frogger.x, frogger.y));
-            }
-            setTimeout(() => {
-                resetGame();
-            }, 130);
-           
+            waterSound.play();   
+            resetGame();
         }
     }
 }
