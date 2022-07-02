@@ -4,11 +4,11 @@
         ctx3.clearRect(0, 0, canvas.width, canvas.height);
         ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
         handleParticles();
-        frogger.draw();
-        frogger.update();
         handleObstacles();
         handleScoreBoard();
         ctx4.drawImage(grass,0, 0, canvas.width, canvas.height);
+        frogger.draw();
+        frogger.update();
         frame++;
         requestAnimationFrame(animate); 
     }
@@ -34,7 +34,11 @@ window.addEventListener('keyup',function(e){
 })
 
 function scored() {
-    score++;
+    score += 100;
+    highScore += score;
+    frogger.score = highScore;
+    console.log('highscore',highScore);
+    console.log('froogerSocre',frogger.score)
     touchDown.play();
     gameSpeed += 0.05;
     frogger.x = canvas.width/2 - frogger.width/2;
@@ -63,7 +67,7 @@ function collision(first, second){
 }
 
 //reset Game
-function resetGame(){
+function resetGame(){ 
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height -40;
     score = 0;
@@ -77,7 +81,9 @@ function resetGame(){
         ctx4.font ='200px Verdana';
         if(!gameStart){
             window.location.href = "./gameOver.html";
-        }    
+        
+        }  
+          
     }
     
     

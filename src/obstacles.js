@@ -94,7 +94,7 @@ function handleObstacles() {
     //colision cars
     for(let i =0 ; i < carsArray.length;i++){
         if(collision(frogger, carsArray[i])){
-            // ctx4.drawImage('./assets/efeitos.png', 0, 100, 100, frogger.x, frogger.y, 50, 50);
+        ctx1.drawImage(collisionImg,frogger.x, frogger.y, 50, 50);
         frogger.deadSound();
         resetGame();
        }
@@ -106,15 +106,19 @@ function handleObstacles() {
         for(let i =0; i < logsArray.length; i++){
             if(collision(frogger, logsArray[i])){
             frogger.x +=  logsArray[i].speed
-            onTheLog = false;
+            onTheLog = true;
             }
         }
-        // if(!onTheLog){
-        //     for(let i =0; i < 30; i++){
-        //         ripplesArray.unshift(new Particles(frogger.x, frogger.y));
-        //     }
-        //     resetGame();
-        // }
+        if(!onTheLog){
+            for(let i =0; i < 30; i++){
+                waterSound.play();
+                ripplesArray.unshift(new Particles(frogger.x, frogger.y));
+            }
+            setTimeout(() => {
+                resetGame();
+            }, 130);
+           
+        }
     }
 }
 

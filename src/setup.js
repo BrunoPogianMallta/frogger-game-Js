@@ -27,9 +27,9 @@ canvas5.height = 600;
 const grid = 80;
 let keys = [];
 let score = 0;
-let colisions = 3;
+let colisions = 2000;
 let frame = 0;
-let gameSpeed = 1;
+let gameSpeed = 6;
 let gameStart = true;
 let onTheLog = false;
 
@@ -38,11 +38,18 @@ const maxParticles = 300;
 const ripplesArray = [];
 const carsArray = [];
 const logsArray = [];
+let highScore =0;
+
+
 
 
 //images and sounds
+
+const waterSound = new Audio();
+waterSound.src = './sounds/water-sound.mp3';
+
 const background = new Image();
-background.src ='../src/assets/general/fundo-rua.png'
+background.src ='../src/assets/general/river_bank2.png'
 
 const grass = new Image();
 // grass.src = './assets/grama.png';
@@ -54,7 +61,7 @@ const turtle = new Image();
 turtle.src =  './assets/obstacles/turtles.png';
 
 const log = new Image();
-log.src = './assets/obstacles/log.png';
+log.src = './assets/obstacles/log2.png';
 
 const car = new Image();
 car.src = './assets/cars/cars2.png';

@@ -6,6 +6,7 @@ class Frogger {
         this.height = this.spriteHeight/5;
         this.x = canvas.width/2 - this.width/2;
         this.y = canvas.height - this.height -40;
+        this.score = 0;
         this.moving = false;
         this.frameX = 0;
         this.frameY = 0;
