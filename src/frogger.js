@@ -12,8 +12,10 @@ class Frogger {
         this.frameY = 0;
     }
     handleTouchStart(event) {
+        keys = [];
         this.touchStartX = event.touches[0].clientX;
         this.touchStartY = event.touches[0].clientY;
+        this.jump(); // Chama o método jump diretamente
     }
 
     handleTouchEnd(event) {
@@ -30,22 +32,12 @@ class Frogger {
         // Verificar se o movimento é horizontal ou vertical
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
             // Movimento horizontal
-            if (deltaX > 0) {
-                // Mover para a direita
-                this.moveRight();
-            } else {
-                // Mover para a esquerda
-                this.moveLeft();
-            }
+            keys[39] = false; // Desativa a tecla da direita
+            keys[37] = false; // Desativa a tecla da esquerda
         } else {
             // Movimento vertical
-            if (deltaY > 0) {
-                // Mover para baixo
-                this.moveDown();
-            } else {
-                // Mover para cima
-                this.moveUp();
-            }
+            keys[40] = false; // Desativa a tecla para baixo
+            keys[38] = false; // Desativa a tecla para cima
         }
 
         this.touchStartX = undefined;
