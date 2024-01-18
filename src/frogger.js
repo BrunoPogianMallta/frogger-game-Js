@@ -11,6 +11,46 @@ class Frogger {
         this.frameX = 0;
         this.frameY = 0;
     }
+    handleTouchStart(event) {
+        this.touchStartX = event.touches[0].clientX;
+        this.touchStartY = event.touches[0].clientY;
+    }
+
+    handleTouchEnd(event) {
+        if (this.touchStartX === undefined || this.touchStartY === undefined) {
+            return;
+        }
+
+        const touchEndX = event.changedTouches[0].clientX;
+        const touchEndY = event.changedTouches[0].clientY;
+
+        const deltaX = touchEndX - this.touchStartX;
+        const deltaY = touchEndY - this.touchStartY;
+
+        // Verificar se o movimento é horizontal ou vertical
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            // Movimento horizontal
+            if (deltaX > 0) {
+                // Mover para a direita
+                this.moveRight();
+            } else {
+                // Mover para a esquerda
+                this.moveLeft();
+            }
+        } else {
+            // Movimento vertical
+            if (deltaY > 0) {
+                // Mover para baixo
+                this.moveDown();
+            } else {
+                // Mover para cima
+                this.moveUp();
+            }
+        }
+
+        this.touchStartX = undefined;
+        this.touchStartY = undefined;
+    }
     update(){
         //frog jump up
         if(keys[38]){
@@ -88,3 +128,7 @@ class Frogger {
 }
 
 const frogger = new Frogger();
+
+// Adicionar event listeners para toques
+canvas.addEventListener('touchstart', (event) => frogger.handleTouchStart(event));
+canvas.addEventListener('touchend', (event) => frogger.handleTouchEnd(event));
