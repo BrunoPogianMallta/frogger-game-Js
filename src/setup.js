@@ -25,6 +25,8 @@ canvas5.height = 600;
 
 //global variables
 const grid = 80;
+const carWidth = 95;
+const carHeigth =63;
 let keys = [];
 let score = 0;
 let colisions = 3;
@@ -65,7 +67,7 @@ log.src = './assets/obstacles/log2.png';
 
 const car = new Image();
 car.src = './assets/cars/cars2.png';
-let numberOfCars =4;
+let numberOfCars = 4;
 
 const froggerSprite = new Image();
 froggerSprite.src ='./assets/frogger/sapo-verde.png';
@@ -73,17 +75,18 @@ froggerSprite.src ='./assets/frogger/sapo-verde.png';
 const touchDown = new Audio();
 touchDown.src = './sounds/touch-down.mp3';
 
-const traffic = new Audio();
-traffic.src = './sounds/traffic.mp3';
-if (typeof traffic.loop == 'boolean')
-{
-    traffic.loop = true;
-}
-else
-{
-    traffic.addEventListener('ended', function() {
-        this.currentTime = 0;
-        this.play();
-    }, false);
-}
+// const traffic = new Audio();
+// traffic.src = './sounds/traffic.mp3';
+
+// if (typeof traffic.loop == 'boolean')
+// {
+//     traffic.loop = true;
+// }
+// else
+// {
+//     traffic.addEventListener('ended', function() {
+//         this.currentTime = 0;
+//         this.play();
+//     }, false);
+// }
 

@@ -49,3 +49,30 @@ canvas {
     background-color: rgba(5, 179, 5, 0.907);
     color: black;
 }
+
+#login-area{
+    display: flex;
+    background-color: rgba(5, 179, 5, 0.907);
+    border-radius: 6px;
+    padding: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 60%;
+    left: 43%;
+    z-index: 1;
+    border: 1px solid black;
+    width: 200px;
+    align-items: center;
+}
+
+#login-area input{
+    width: 150px;
+    border-radius: 6px;
+    border: none;
+}
+
+#login-area button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}

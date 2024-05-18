@@ -53,6 +53,7 @@ function initObstacles() {
         let x = i * 350;
         carsArray.push(new Obstacle(x, canvas.height - grid * 2 -20, grid * 2, grid, 1,
         'car'));
+        console.log(carsArray)
     }
     //secound lane
     for(let i = 0; i < 2;i++){

@@ -1,6 +1,6 @@
 
     function animate() {
-        traffic.play();
+        // traffic.play();
         ctx3.clearRect(0, 0, canvas.width, canvas.height);
         ctx2.drawImage(background,0, 0, canvas.width, canvas.height);
         handleParticles();

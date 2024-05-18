@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(207, 231, 207);
+}
+#register-form-wrapper {
+    /* border: 1px solid black; */
+    width: 800px;
+    height: 900px;
+    background-image: url('../assets/general/jungle_bg.png');
+    background-size: cover; /* Ajuste para a imagem preencher completamente o container */
+    background-position: center; /* Centralize a imagem no container */
+    margin: 10px auto;
+    background-color: rgba(245, 248, 241, 0.1);
+}
+#register-form-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/general/jungle_bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Define a opacidade da imagem de fundo */
+    z-index: -1; /* Coloca a imagem de fundo atrás do conteúdo */
+    border-radius: 5px;
+}
+
+#register-form-container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 290px auto;
+    justify-content: first baseline;
+    width: 400px;
+    padding: 50px 15px;
+    border: 1px solid black;
+    background-color: rgba(5, 179, 5, 1);
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    
+    
+}
+
+#register-form-container input,label{
+    margin-top: 10px;
+    padding: 5px;
+}
+#register-form-container input{
+    text-align: center;
+    width: 60%;
+    color: green;
+    
+}
+#register-form-container label{
+    border-bottom: 1px solid green;
+}
+#register-form-container button{
+    margin-top: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+#register-form-container button:hover{
+    cursor: pointer;
+}
+
+h2{
+    position: relative;
+    justify-self: center;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    top: 320px;
+    left: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #003b17;
+    font-weight: bolder;
+    background-color: rgba(5, 179, 5, 1);
+    border: 1px solid green;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 15px #00ff2a);
+}
+
+#frogger-apontando{
+    position: absolute;
+    top: 200px;
+    left: 595px;
+}
