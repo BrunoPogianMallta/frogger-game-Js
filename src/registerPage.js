@@ -21,7 +21,7 @@ document.getElementById('register-form-container').addEventListener('submit', fu
     };
 
     // Envie os dados usando fetch API
-    fetch('http://localhost:3000/register', { // Substitua pela URL do seu endpoint local
+    fetch('https://backend-frogger.vercel.app/register', { // Substitua pela URL do seu endpoint local
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

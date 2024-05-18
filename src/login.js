@@ -9,7 +9,7 @@ document.getElementById('login-btn').addEventListener('click', function(event) {
         password: password
     };
 
-    fetch('http://localhost:3000/login', {
+    fetch('https://backend-frogger.vercel.app/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
